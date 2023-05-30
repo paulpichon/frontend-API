@@ -5,7 +5,11 @@ import { validarFormulario } from "./js/validar-formulario.js";
 document.addEventListener('DOMContentLoaded', () => {
     //formulario
     const formulario = document.querySelector('#formularioRegistro');
-    //añadir un listenner
-    formulario.addEventListener('submit', validarFormulario);
+    //verificar si existe el formulario en la pagina actual
+    if (formulario) {
+        //añadir un listenner
+    formulario.addEventListener('submit', validarFormulario);    
+    }
+    
     
 });
