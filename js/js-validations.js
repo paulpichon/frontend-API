@@ -11,11 +11,11 @@ $( document ).ready( function () {
         rules: {
             marca: {
                 required: true,
-                regex: /^([a-zA-ZáéíóúÁÉÍÓÚñÑ]+[\s]*)+$/
+                regex: /^([A-ZáéíóúÁÉÍÓÚñÑ]+[\s]*)+$/
             } ,
             modelo: {
                 required: true,
-                regex: /^([a-zA-ZáéíóúÁÉÍÓÚñÑ0-9]+[\s]*)+$/
+                regex: /^([A-ZáéíóúÁÉÍÓÚñÑ0-9]+[\s]*)+$/
             },
             year: {
                 required: true,
@@ -33,11 +33,11 @@ $( document ).ready( function () {
             },
             transmision: {
                 required: true,
-                regex: /^([a-zA-ZáéíóúÁÉÍÓÚñÑ]+[\s]*)+$/
+                regex: /^([A-ZÁÉÍÓÚñÑ]+[\s]*)+$/
             },
             color: {
                 required: true,
-                regex: /^([a-zA-ZáéíóúÁÉÍÓÚñÑ]+[\s]*)+$/
+                regex: /^([A-ZÁÉÍÓÚñÑ]+[\s]*)+$/
             }
  
             
@@ -45,7 +45,7 @@ $( document ).ready( function () {
         messages: {
             marca: {
                 required: "La marca es obligatoria.",
-                regex: "Solo se permiten letras."
+                regex: "Solo se permiten letras mayusculas."
             },
             modelo: {
                 required: "El modelo es obligatoria.",
@@ -59,11 +59,11 @@ $( document ).ready( function () {
             },
             precio: {
                 required: "El precio es obligatoria.",
-                regex: "No se permiten letras."
+                regex: "No se permiten letras mayusculas."
             },
             puertas: {
                 required: "El numero de puertas es obligatorio.",
-                regex: "No se permiten letras."
+                regex: "No se permiten letras mayusculas."
             },
             transmision: {
                 required: "El tipo de transmision es obligatorio.",
@@ -71,7 +71,7 @@ $( document ).ready( function () {
             },
             color: {
                 required: "El color es obligatorio.",
-                regex: "No se permiten numeros ni caracteres especiales."
+                regex: "Solo se permiten letras mayusculas"
             },
         },
         errorElement: "em",
