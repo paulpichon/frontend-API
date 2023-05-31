@@ -17,8 +17,6 @@ const mostrarInfoEditar = async ( id ) => {
         //llamamos funcion para mostrar la info en los inputs
         mostrarIndoInputsHTML( resultado );
     }
-
-
 }
 //exports
 export {
