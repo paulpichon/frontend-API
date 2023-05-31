@@ -20,9 +20,6 @@ const mostrarIndoInputsHTML = ( automovil ) => {
     editarPuertas.value = puertas;
     editarTransmision.value = transmision;
     editarColor.value = color;
-    
-        // creamos un objeto con la nueva informacion
-
 }
 // exports
 export {

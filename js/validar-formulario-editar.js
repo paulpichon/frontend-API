@@ -1,8 +1,7 @@
-// funcion para registrar el usuario en la API
-import { registrarAutomovilAPI } from "./registrar-automovil-api.js";
+// importar funcion para editar automovil
+import { editarAutomovilAPI } from "./editar-automovil.js";
 
-
-const validarFormulario = ( e ) => {
+const validarFormularioEditar = ( e, id ) => {
     //prevent default
     e.preventDefault();
     //inputs values
@@ -25,7 +24,7 @@ const validarFormulario = ( e ) => {
         color
     ) {
         //crear un objeto con la informacion
-        const automovilObj = {
+        const automovilObjEditar = {
             marca, 
             modelo,
             year,
@@ -34,13 +33,13 @@ const validarFormulario = ( e ) => {
             transmision,
             color
         }
+        // console.log( automovilObjEditar );
         //Mandar el objeto a la funcion que lo guardara en la BD
-        registrarAutomovilAPI( automovilObj );
+        editarAutomovilAPI( automovilObjEditar, id );
         
     }
-
 }
-
+// export
 export {
-    validarFormulario
+    validarFormularioEditar
 }

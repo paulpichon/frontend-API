@@ -1,4 +1,5 @@
-$( document ).ready( function () {
+const validarForm = ( formulario ) => {
+    // console.log( formulario );
     // Regex validar solo texto en campo marca
     $.validator.addMethod("regex", function(value, element, regexp) {
 		var re = new RegExp(regexp);
@@ -6,8 +7,8 @@ $( document ).ready( function () {
 		},
 		"Revisa los inputs"
 	);
-    
-    $( "#formularioRegistro" ).validate( {
+
+    $( `#${ formulario }` ).validate( {
         rules: {
             marca: {
                 required: true,
@@ -86,4 +87,9 @@ $( document ).ready( function () {
             $(element).removeClass('is-invalid');
           }
     } );
-} );
+
+}
+// export
+export {
+    validarForm
+}
