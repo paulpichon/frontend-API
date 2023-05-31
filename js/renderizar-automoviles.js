@@ -16,12 +16,12 @@ const automovilesHTML = ( automoviles ) => {
             <th scope="row">${ marca }</th>
             <td>${ modelo }</td>
             <td>${ year }</td>
-            <td>${ precio }</td>
+            <td>$ ${ precio }</td>
             <td>${ puertas }</td>
             <td>${ transmision }</td>
             <td>${ color }</td>
             <td>
-                <a href="editar-usuario.html?id=${ _id }" id="editar" class="editar" title="Editar Automovil"><i class="fa-solid fa-wand-magic-sparkles"></i></a>
+                <a href="editar-automovil.html?id=${ _id }" id="editar" class="editar" title="Editar Automovil"><i class="fa-solid fa-wand-magic-sparkles"></i></a>
                 <a href="#" data-automovil="${ _id }" class="eliminar fa-solid fa-file-circle-xmark" title="Eliminar Usuario"></a>
             </td>
         `;
