@@ -25,13 +25,13 @@ const registrarAutomovilAPI = async( automovilObj ) => {
     if ( response.status == 200 ) {
         // console.log( response.status );
         //mostrar la alerta de success
-        mostrarAlerta('AUTOMOVIL REGISTRADO EXITOSAMENTE', 'success');
+        mostrarAlerta('AUTOMOVIL REGISTRADO EXITOSAMENTE', 'success', formulario);
         //resetaer el form
         formulario.reset();
         
     }else {
-        console.log( response.status );
-        mostrarAlerta('Verifique que los campos esten llenos correctamente', 'error');
+        // console.log( response.status );
+        mostrarAlerta('Verifique que los campos esten llenos correctamente', 'error', formulario);
     }
 }
 //exports 

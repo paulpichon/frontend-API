@@ -1,7 +1,8 @@
 //fucnion para mostrar alertas
-const mostrarAlerta = ( mensaje, tipoAlerta ) => {
-    // formulario
-    const formulario = document.querySelector('#formularioRegistro');
+const mostrarAlerta = ( mensaje, tipoAlerta, formulario ) => {
+    // MENSAJE = mensaje que se mostrara en la alerta
+    // tipoAlerta = success:error
+    // formulario = es el selector donde se mostrara la alerta
 
     //verificar que no se muestre mas de 1 vez las alertas
     const alertas = document.querySelector('.alertaMensaje');
@@ -14,14 +15,21 @@ const mostrarAlerta = ( mensaje, tipoAlerta ) => {
         }else {
             divAlerta.classList.add('alert', 'alert-danger', 'text-center', 'mt-4', 'alertaMensaje');
         }
+        //Añadir el mensaje al div
         divAlerta.textContent = mensaje;
         // quitar el mensaje
         setTimeout(() => {
             divAlerta.remove();
-        }, 5000);
-        
-        //mostrar
-        formulario.appendChild( divAlerta );
+        }, 3000);
+        // si el parametro formulario es igual a 'automoviles mostramos la alerta antes de la tabla automobiles
+        if ( formulario.getAttribute('id') === 'automoviles' ) {
+            //mostrar
+            //mostrar la alerta antes de la TABLA
+            document.querySelector('.alertaEliminar').insertBefore( divAlerta, formulario);
+        } else {
+            //mostrar
+            formulario.appendChild( divAlerta );
+        }
     }
 }
 //exports

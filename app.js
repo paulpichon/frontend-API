@@ -8,6 +8,8 @@ import { mostrarInfoEditar } from "./js/mostrar-info-editar.js";
 import { validarForm } from "./js/js-validations.js";
 // funcion para validar formulario editar
 import { validarFormularioEditar } from "./js/validar-formulario-editar.js";
+// funcion para eliminar automovil
+import { eliminarAutomovil } from "./js/eliminar-automovil.js";
 
 //agregar un listener al formulario
 document.addEventListener('DOMContentLoaded', () => {
@@ -16,6 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const formulario = document.querySelector('#formularioRegistro');
     //formulario para editar un automovil
     const formularioEditar = document.querySelector('#formularioEditar');
+    // selector para detectar cuando hagan click en eliminar automovil
+    const tablaAutomoviles = document.querySelector('#automoviles tbody');
 
     //ID en el URL para editar automovil
     const parametrosURL = new URLSearchParams( window.location.search );
@@ -50,4 +54,9 @@ document.addEventListener('DOMContentLoaded', () => {
     //mostrar los automoviles
     mostrarAutomoviles();
 
+    // verificar si existe tablaAutomoviles
+    if ( tablaAutomoviles ) {
+        //FUNCION PARA ELIMINAR UN AUTOMOVIL
+        tablaAutomoviles.addEventListener('click', eliminarAutomovil);
+    }
 });
