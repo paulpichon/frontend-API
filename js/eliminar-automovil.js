@@ -11,7 +11,7 @@ const eliminarAutomovil = (e) => {
         // LALAMR FUNCION PARA ELIMINARLO
         eliminarAutomovilApi( idEliminar );
         setTimeout(() => {
-            window.location.href = "http://127.0.0.1:5500/mostrar-vehiculos.html";
+            window.location.href = "https://648378529800c800b760ba27--cheery-ganache-215d0a.netlify.app/mostrar-vehiculos.html";
         }, 3000);
     }
 }
