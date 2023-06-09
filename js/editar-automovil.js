@@ -18,7 +18,7 @@ const editarAutomovilAPI = async ( automovilObjEditar, id ) => {
     redirect: 'follow'
     };
 
-    const response = await fetch(`http://localhost:5000/api/automoviles/${ id }`, requestOptions);
+    const response = await fetch(`https://apiautomovil-production-0c64.up.railway.app/api/automoviles/${ id }`, requestOptions);
     const resultado = await response.json();
 
     // si el status es 200

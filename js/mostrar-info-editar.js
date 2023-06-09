@@ -9,7 +9,7 @@ const mostrarInfoEditar = async ( id ) => {
         redirect: 'follow'
       };
       
-    const response = await fetch(`http://localhost:5000/api/automoviles/${ id }`, requestOptions)
+    const response = await fetch(`https://apiautomovil-production-0c64.up.railway.app/api/automoviles/${ id }`, requestOptions)
     const resultado = await response.json();
     // console.log( resultado );
     //si el satus es 200 llamamos la funcion para mostrar la INFO en los inputs
